@@ -553,8 +553,10 @@ function parseAndRender(response) {
   var maxDate = '';
 
   rows.forEach(function(row) {
-    if (!row.c || !row.c[0] || row.c[0].v === null) return;
-    var dateVal = String(row.c[0].v);
+    if (!row.c || !row.c[0]) return;
+    // gvizはDate型を "Date(yyyy,m,d)" で返すため、表示用の f フィールドを使う
+    var dateCell = row.c[0];
+    var dateVal = dateCell.f ? String(dateCell.f) : (dateCell.v ? String(dateCell.v) : '');
 
     // MM/DD 形式のみ処理（ヘッダー行・集計行はスキップ）
     if (!/^\d{2}\/\d{2}$/.test(dateVal)) return;
