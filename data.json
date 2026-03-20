@@ -1,11 +1,287 @@
 {
-  "updatedAt": "2026-03-20T12:43:41.064520+09:00",
-  "updatedAtLabel": "2026年03月20日 12:43",
+  "updatedAt": "2026-03-20T15:18:52.144305+09:00",
+  "updatedAtLabel": "2026年03月20日 15:18",
   "targetMonth": "2026年03月",
   "dailyReports": [
     {
+      "date": "03/02",
+      "timestamp": 1772420400,
+      "insurance": {
+        "count": 33,
+        "amount": 435120
+      },
+      "jihi": {
+        "count": 0,
+        "amount": 0
+      },
+      "kyosei": {
+        "count": 1,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 3,
+        "amount": 39380
+      },
+      "total": 474500,
+      "jissitsu": 34,
+      "jihiRate": 0
+    },
+    {
+      "date": "03/03",
+      "timestamp": 1772506800,
+      "insurance": {
+        "count": 37,
+        "amount": 495030
+      },
+      "jihi": {
+        "count": 0,
+        "amount": 0
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 3,
+        "amount": 6920
+      },
+      "total": 501950,
+      "jissitsu": 37,
+      "jihiRate": 0
+    },
+    {
+      "date": "03/04",
+      "timestamp": 1772593200,
+      "insurance": {
+        "count": 30,
+        "amount": 394000
+      },
+      "jihi": {
+        "count": 3,
+        "amount": 191500
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 4,
+        "amount": 12280
+      },
+      "total": 597780,
+      "jissitsu": 33,
+      "jihiRate": 33
+    },
+    {
+      "date": "03/05",
+      "timestamp": 1772679600,
+      "insurance": {
+        "count": 27,
+        "amount": 351380
+      },
+      "jihi": {
+        "count": 2,
+        "amount": 181500
+      },
+      "kyosei": {
+        "count": 5,
+        "amount": 55000
+      },
+      "hanpan": {
+        "count": 4,
+        "amount": 13330
+      },
+      "total": 601210,
+      "jissitsu": 34,
+      "jihiRate": 34
+    },
+    {
+      "date": "03/06",
+      "timestamp": 1772766000,
+      "insurance": {
+        "count": 26,
+        "amount": 335790
+      },
+      "jihi": {
+        "count": 3,
+        "amount": 72600
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 1,
+        "amount": 2750
+      },
+      "total": 411140,
+      "jissitsu": 29,
+      "jihiRate": 18
+    },
+    {
+      "date": "03/07",
+      "timestamp": 1772852400,
+      "insurance": {
+        "count": 46,
+        "amount": 639520
+      },
+      "jihi": {
+        "count": 1,
+        "amount": 16500
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 2,
+        "amount": 3880
+      },
+      "total": 659900,
+      "jissitsu": 47,
+      "jihiRate": 3
+    },
+    {
+      "date": "03/09",
+      "timestamp": 1773025200,
+      "insurance": {
+        "count": 24,
+        "amount": 251540
+      },
+      "jihi": {
+        "count": 0,
+        "amount": 0
+      },
+      "kyosei": {
+        "count": 4,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 1,
+        "amount": 4400
+      },
+      "total": 255940,
+      "jissitsu": 28,
+      "jihiRate": 0
+    },
+    {
+      "date": "03/10",
+      "timestamp": 1773111600,
+      "insurance": {
+        "count": 41,
+        "amount": 417450
+      },
+      "jihi": {
+        "count": 0,
+        "amount": 0
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 1,
+        "amount": 1580
+      },
+      "total": 419030,
+      "jissitsu": 41,
+      "jihiRate": 0
+    },
+    {
+      "date": "03/11",
+      "timestamp": 1773198000,
+      "insurance": {
+        "count": 32,
+        "amount": 367860
+      },
+      "jihi": {
+        "count": 4,
+        "amount": 314600
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 3,
+        "amount": 13010
+      },
+      "total": 695470,
+      "jissitsu": 36,
+      "jihiRate": 46
+    },
+    {
+      "date": "03/12",
+      "timestamp": 1773284400,
+      "insurance": {
+        "count": 23,
+        "amount": 245020
+      },
+      "jihi": {
+        "count": 2,
+        "amount": 240000
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 1,
+        "amount": 550
+      },
+      "total": 485570,
+      "jissitsu": 25,
+      "jihiRate": 49
+    },
+    {
+      "date": "03/13",
+      "timestamp": 1773370800,
+      "insurance": {
+        "count": 31,
+        "amount": 349770
+      },
+      "jihi": {
+        "count": 1,
+        "amount": 6600
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 4,
+        "amount": 12720
+      },
+      "total": 369090,
+      "jissitsu": 32,
+      "jihiRate": 2
+    },
+    {
+      "date": "03/14",
+      "timestamp": 1773457200,
+      "insurance": {
+        "count": 50,
+        "amount": 618350
+      },
+      "jihi": {
+        "count": 4,
+        "amount": 246600
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 7,
+        "amount": 45920
+      },
+      "total": 910870,
+      "jissitsu": 54,
+      "jihiRate": 29
+    },
+    {
       "date": "03/16",
-      "timestamp": 1773659051,
+      "timestamp": 1773630000,
       "insurance": {
         "count": 23,
         "amount": 216400
@@ -24,11 +300,11 @@
       },
       "total": 439380,
       "jissitsu": 29,
-      "jihiRate": 21
+      "jihiRate": 28
     },
     {
       "date": "03/17",
-      "timestamp": 1773745452,
+      "timestamp": 1773716400,
       "insurance": {
         "count": 34,
         "amount": 308450
@@ -47,11 +323,11 @@
       },
       "total": 610910,
       "jissitsu": 40,
-      "jihiRate": 23
+      "jihiRate": 49
     },
     {
       "date": "03/18",
-      "timestamp": 1773831851,
+      "timestamp": 1773802800,
       "insurance": {
         "count": 40,
         "amount": 386590
@@ -70,11 +346,11 @@
       },
       "total": 541850,
       "jissitsu": 42,
-      "jihiRate": 24
+      "jihiRate": 28
     },
     {
       "date": "03/19",
-      "timestamp": 1773918253,
+      "timestamp": 1773889200,
       "insurance": {
         "count": 25,
         "amount": 264100
@@ -93,23 +369,23 @@
       },
       "total": 344100,
       "jissitsu": 30,
-      "jihiRate": 24
+      "jihiRate": 23
     }
   ],
   "monthly": {
-    "total": 1936240,
-    "patients": 141,
-    "insurance": 1175540,
-    "jihi": 618800,
-    "kyosei": 110000,
-    "hanpan": 31900,
-    "jihiRate": 32,
-    "workDays": 4,
-    "avgPatients": 35
+    "total": 8318690,
+    "patients": 571,
+    "insurance": 6076370,
+    "jihi": 1888700,
+    "kyosei": 165000,
+    "hanpan": 188620,
+    "jihiRate": 23,
+    "workDays": 16,
+    "avgPatients": 36
   },
   "latest": {
     "date": "03/19",
-    "timestamp": 1773918253,
+    "timestamp": 1773889200,
     "insurance": {
       "count": 25,
       "amount": 264100
@@ -128,7 +404,7 @@
     },
     "total": 344100,
     "jissitsu": 30,
-    "jihiRate": 24
+    "jihiRate": 23
   },
   "analysis": {
     "summary": "分析データを取得できませんでした。次回の実行をお待ちください。",
