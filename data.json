@@ -1,22 +1,137 @@
 {
-  "updatedAt": null,
-  "updatedAtLabel": "初期データ（まだ自動更新されていません）",
-  "targetMonth": "2026年3月",
-  "dailyReports": [],
+  "updatedAt": "2026-03-20T12:43:41.064520+09:00",
+  "updatedAtLabel": "2026年03月20日 12:43",
+  "targetMonth": "2026年03月",
+  "dailyReports": [
+    {
+      "date": "03/16",
+      "timestamp": 1773659051,
+      "insurance": {
+        "count": 23,
+        "amount": 216400
+      },
+      "jihi": {
+        "count": 2,
+        "amount": 83600
+      },
+      "kyosei": {
+        "count": 8,
+        "amount": 110000
+      },
+      "hanpan": {
+        "count": 3,
+        "amount": 29380
+      },
+      "total": 439380,
+      "jissitsu": 29,
+      "jihiRate": 21
+    },
+    {
+      "date": "03/17",
+      "timestamp": 1773745452,
+      "insurance": {
+        "count": 34,
+        "amount": 308450
+      },
+      "jihi": {
+        "count": 6,
+        "amount": 301200
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 1,
+        "amount": 1260
+      },
+      "total": 610910,
+      "jissitsu": 40,
+      "jihiRate": 23
+    },
+    {
+      "date": "03/18",
+      "timestamp": 1773831851,
+      "insurance": {
+        "count": 40,
+        "amount": 386590
+      },
+      "jihi": {
+        "count": 2,
+        "amount": 154000
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 1,
+        "amount": 1260
+      },
+      "total": 541850,
+      "jissitsu": 42,
+      "jihiRate": 24
+    },
+    {
+      "date": "03/19",
+      "timestamp": 1773918253,
+      "insurance": {
+        "count": 25,
+        "amount": 264100
+      },
+      "jihi": {
+        "count": 1,
+        "amount": 80000
+      },
+      "kyosei": {
+        "count": 4,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 0,
+        "amount": 0
+      },
+      "total": 344100,
+      "jissitsu": 30,
+      "jihiRate": 24
+    }
+  ],
   "monthly": {
-    "total": 0,
-    "patients": 0,
-    "insurance": 0,
-    "jihi": 0,
-    "kyosei": 0,
-    "hanpan": 0,
-    "jihiRate": 0,
-    "workDays": 0,
-    "avgPatients": 0
+    "total": 1936240,
+    "patients": 141,
+    "insurance": 1175540,
+    "jihi": 618800,
+    "kyosei": 110000,
+    "hanpan": 31900,
+    "jihiRate": 32,
+    "workDays": 4,
+    "avgPatients": 35
   },
-  "latest": null,
+  "latest": {
+    "date": "03/19",
+    "timestamp": 1773918253,
+    "insurance": {
+      "count": 25,
+      "amount": 264100
+    },
+    "jihi": {
+      "count": 1,
+      "amount": 80000
+    },
+    "kyosei": {
+      "count": 4,
+      "amount": 0
+    },
+    "hanpan": {
+      "count": 0,
+      "amount": 0
+    },
+    "total": 344100,
+    "jissitsu": 30,
+    "jihiRate": 24
+  },
   "analysis": {
-    "summary": "毎朝7時に自動更新されます。初回更新をお待ちください。",
+    "summary": "分析データを取得できませんでした。次回の実行をお待ちください。",
     "goodPoints": [],
     "improvements": [],
     "actionPlans": [],
