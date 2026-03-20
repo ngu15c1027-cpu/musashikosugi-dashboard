@@ -18,6 +18,7 @@
   --border: #dce8e8;
   --success: #16a34a;
   --warning: #d97706;
+  --danger: #dc2626;
   --shadow: 0 1px 6px rgba(0,0,0,0.06);
   --radius: 14px;
 }
@@ -53,49 +54,24 @@ body {
   display: inline-block;
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.3);
-  padding: 4px 16px;
-  border-radius: 100px;
-  font-size: 12px;
-  margin-bottom: 16px;
+  padding: 4px 16px; border-radius: 100px;
+  font-size: 12px; margin-bottom: 16px;
 }
-.header h1 {
-  font-size: clamp(22px, 4vw, 34px);
-  font-weight: 800;
-  line-height: 1.3;
-  margin-bottom: 8px;
-}
+.header h1 { font-size: clamp(22px,4vw,34px); font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
 .header p { font-size: 15px; opacity: 0.85; max-width: 600px; }
 .header-date { margin-top: 16px; font-size: 13px; opacity: 0.6; }
 
 /* ---- Nav ---- */
-.nav {
-  position: sticky;
-  top: 0; z-index: 50;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.nav { position: sticky; top: 0; z-index: 50; max-width: 900px; margin: 0 auto; padding: 0 24px; }
 .nav-inner {
-  background: var(--card);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  padding: 10px 16px;
-  display: flex;
-  gap: 4px;
-  overflow-x: auto;
-  scrollbar-width: none;
+  background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
+  padding: 10px 16px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
 }
 .nav-inner::-webkit-scrollbar { display: none; }
 .nav a {
-  display: block;
-  padding: 8px 14px;
-  text-decoration: none;
-  color: var(--text-light);
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-  border-radius: 8px;
-  transition: all 0.2s;
+  display: block; padding: 8px 14px; text-decoration: none;
+  color: var(--text-light); font-size: 13px; font-weight: 600;
+  white-space: nowrap; border-radius: 8px; transition: all 0.2s;
 }
 .nav a:hover, .nav a.active { color: var(--primary); background: var(--primary-light); }
 
@@ -103,75 +79,38 @@ body {
 .main { max-width: 900px; margin: 0 auto; padding: 24px 24px 80px; }
 .section { margin-bottom: 48px; }
 .section-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border);
 }
 .section-icon {
-  width: 36px; height: 36px;
-  background: var(--primary);
-  color: white;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
+  width: 36px; height: 36px; background: var(--primary); color: white;
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
 }
 .section-title { font-size: 20px; font-weight: 800; color: var(--primary-dark); }
 
 /* ---- Metrics ---- */
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 14px;
-  margin-bottom: 24px;
-}
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 14px; margin-bottom: 24px; }
 .metric {
-  background: var(--card);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  padding: 20px;
-  text-align: center;
+  background: var(--card); border-radius: 12px; box-shadow: var(--shadow);
+  border: 1px solid var(--border); padding: 20px; text-align: center;
 }
-.metric .value { font-size: 30px; font-weight: 800; color: var(--primary); line-height: 1.2; }
+.metric .value { font-size: 28px; font-weight: 800; color: var(--primary); line-height: 1.2; }
 .metric .label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
-.metric .sub { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+.metric .sub   { font-size: 11px; color: var(--text-light); margin-top: 4px; }
 
-/* ---- Revenue breakdown ---- */
+/* ---- Breakdown ---- */
 .breakdown {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  padding: 20px 24px;
-  margin-bottom: 24px;
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--border); padding: 20px 24px; margin-bottom: 24px;
 }
-.breakdown h5 {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-light);
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.breakdown-bar {
-  display: flex;
-  height: 12px;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 14px;
-}
+.breakdown h5 { font-size: 13px; font-weight: 700; color: var(--text-light); margin-bottom: 12px; letter-spacing: 0.5px; }
+.breakdown-bar { display: flex; height: 12px; border-radius: 6px; overflow: hidden; margin-bottom: 14px; }
 .breakdown-bar span { transition: width 0.8s ease; }
 .seg-insurance { background: var(--primary); }
 .seg-jihi      { background: var(--accent); }
 .seg-kyosei    { background: #a855f7; }
 .seg-hanpan    { background: #22c55e; }
-
 .breakdown-legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; }
 .legend-item { display: flex; align-items: center; gap: 5px; }
 .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
@@ -180,179 +119,138 @@ body {
 
 /* ---- Chart ---- */
 .chart-wrap {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  padding: 20px 24px;
-  overflow-x: auto;
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--border); padding: 20px 24px; overflow-x: auto;
 }
 .chart-title { font-size: 14px; font-weight: 700; color: var(--primary-dark); margin-bottom: 4px; }
 .chart-note  { font-size: 11px; color: var(--text-light); margin-bottom: 16px; }
 .chart-bar {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  height: 150px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--border);
-  min-width: 500px;
+  display: flex; align-items: flex-end; gap: 5px;
+  height: 150px; padding-bottom: 4px; border-bottom: 1px solid var(--border); min-width: 500px;
 }
-.bar-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  min-width: 28px;
-}
+.bar-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 28px; }
 .bar {
-  width: 100%;
-  max-width: 38px;
+  width: 100%; max-width: 38px;
   background: linear-gradient(180deg, var(--primary), #1aadad);
-  border-radius: 4px 4px 0 0;
-  margin: 0 auto;
-  min-height: 4px;
+  border-radius: 4px 4px 0 0; margin: 0 auto; min-height: 4px;
 }
 .bar-label { font-size: 10px; color: var(--text-light); white-space: nowrap; }
 .bar-value  { font-size: 10px; font-weight: 700; color: var(--primary-dark); }
 
-/* ---- Loading / Error ---- */
-.loading {
-  text-align: center;
-  padding: 48px 24px;
-  color: var(--text-light);
-  font-size: 14px;
+/* ---- 経営分析カード ---- */
+.analysis-summary {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--border); padding: 24px; margin-bottom: 20px;
+  font-size: 14px; line-height: 1.9; color: var(--text);
 }
-.loading::before {
-  content: '';
-  display: block;
-  width: 32px; height: 32px;
-  border: 3px solid var(--border);
-  border-top-color: var(--primary);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin: 0 auto 16px;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-.error-msg {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 10px;
-  padding: 16px 20px;
-  font-size: 13px;
-  color: #991b1b;
+.analysis-summary .label {
+  font-size: 12px; font-weight: 700; color: var(--primary);
+  letter-spacing: 0.5px; margin-bottom: 8px;
 }
 
-/* ---- Improve List ---- */
-.improve-list { list-style: none; padding: 0; }
-.improve-list li {
-  padding: 12px 16px 12px 40px;
-  position: relative;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 14px;
+.analysis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; margin-bottom: 20px; }
+
+.analysis-card {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--border); padding: 20px;
 }
-.improve-list li:last-child { border-bottom: none; }
-.improve-list li::before {
-  content: '';
-  position: absolute;
-  left: 12px; top: 16px;
-  width: 16px; height: 16px;
-  border: 2px solid var(--primary);
-  border-radius: 4px;
+.analysis-card .card-title {
+  font-size: 14px; font-weight: 800; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
 }
-.improve-list li.done::before {
-  background: var(--success);
-  border-color: var(--success);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3 4.3a1 1 0 010 1.4l-6 6a1 1 0 01-1.4 0l-3-3a1 1 0 011.4-1.4L6.5 9.6l5.3-5.3a1 1 0 011.4 0z'/%3E%3C/svg%3E");
-  background-size: 12px;
-  background-position: center;
-  background-repeat: no-repeat;
+.analysis-card ul { list-style: none; padding: 0; }
+.analysis-card ul li {
+  font-size: 13px; line-height: 1.7; padding: 8px 0 8px 20px;
+  position: relative; border-bottom: 1px solid #f5f5f5;
 }
-.improve-list li .date { font-size: 11px; color: var(--text-light); margin-left: 8px; }
+.analysis-card ul li:last-child { border-bottom: none; }
+.analysis-card ul li::before {
+  content: '▸';
+  position: absolute; left: 0; color: var(--primary);
+}
+.card-good    .card-title { color: var(--success); }
+.card-good    ul li::before { color: var(--success); }
+.card-improve .card-title { color: var(--warning); }
+.card-improve ul li::before { color: var(--warning); }
+.card-action  .card-title { color: var(--primary); }
+.card-risk    .card-title { color: var(--danger); }
+.card-risk    ul li::before { color: var(--danger); }
 
 /* ---- Chatwork ---- */
-.cw-table {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-}
+.cw-table { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
 .cw-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .cw-table tr { border-bottom: 1px solid var(--border); }
 .cw-table tr:last-child { border-bottom: none; }
-.cw-table th {
-  padding: 12px 16px;
-  font-weight: 700;
-  color: var(--primary-dark);
-  text-align: left;
-  background: var(--primary-light);
-}
+.cw-table th { padding: 12px 16px; font-weight: 700; color: var(--primary-dark); text-align: left; background: var(--primary-light); }
 .cw-table td { padding: 12px 16px; }
 .cw-table td a { color: var(--primary); text-decoration: none; font-weight: 600; }
 .cw-table td a:hover { text-decoration: underline; }
 
+/* ---- Improve List ---- */
+.improve-list { list-style: none; padding: 0; }
+.improve-list li {
+  padding: 12px 16px 12px 40px; position: relative;
+  border-bottom: 1px solid #f0f0f0; font-size: 14px;
+}
+.improve-list li:last-child { border-bottom: none; }
+.improve-list li::before {
+  content: ''; position: absolute; left: 12px; top: 16px;
+  width: 16px; height: 16px; border: 2px solid var(--primary); border-radius: 4px;
+}
+.improve-list li.done::before {
+  background: var(--success); border-color: var(--success);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3 4.3a1 1 0 010 1.4l-6 6a1 1 0 01-1.4 0l-3-3a1 1 0 011.4-1.4L6.5 9.6l5.3-5.3a1 1 0 011.4 0z'/%3E%3C/svg%3E");
+  background-size: 12px; background-position: center; background-repeat: no-repeat;
+}
+.improve-list li .date { font-size: 11px; color: var(--text-light); margin-left: 8px; }
+
 /* ---- 1on1 ---- */
 .oneon1-summary {
-  font-size: 13px;
-  color: var(--text-light);
-  margin-bottom: 16px;
-  padding: 10px 16px;
-  background: var(--primary-light);
-  border-radius: 8px;
-  border-left: 3px solid var(--primary);
+  font-size: 13px; color: var(--text-light); margin-bottom: 16px;
+  padding: 10px 16px; background: var(--primary-light);
+  border-radius: 8px; border-left: 3px solid var(--primary);
 }
 .oneon1-group { margin-bottom: 24px; }
 .oneon1-group-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--border);
+  font-size: 13px; font-weight: 700; color: var(--text-light);
+  text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
 }
-.oneon1-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 10px;
-}
+.oneon1-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px,1fr)); gap: 10px; }
 .oneon1-card {
-  background: var(--card);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  padding: 14px;
-  text-align: center;
-  box-shadow: var(--shadow);
+  background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+  padding: 14px; text-align: center; box-shadow: var(--shadow);
 }
 .oneon1-card.done      { border-color: var(--success); background: #f0fdf4; }
 .oneon1-card.scheduled { border-color: var(--accent);  background: var(--accent-light); }
 .oneon1-card.pending   { border-color: #ddd; }
-.oneon1-name  { font-size: 13px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
-.oneon1-status {
-  font-size: 11px; font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 6px;
-  display: inline-block;
-}
+.oneon1-name   { font-size: 13px; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
+.oneon1-status { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px; display: inline-block; }
 .done      .oneon1-status { background: #dcfce7; color: #166534; }
 .scheduled .oneon1-status { background: #fef3c7; color: #92400e; }
 .pending   .oneon1-status { background: #f3f4f6; color: #6b7280; }
 
+/* ---- Loading / Error ---- */
+.loading { text-align: center; padding: 48px 24px; color: var(--text-light); font-size: 14px; }
+.loading::before {
+  content: ''; display: block; width: 32px; height: 32px;
+  border: 3px solid var(--border); border-top-color: var(--primary);
+  border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.no-data { text-align: center; padding: 32px; color: var(--text-light); font-size: 13px; }
+.error-msg { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 16px 20px; font-size: 13px; color: #991b1b; }
+
 /* ---- Footer ---- */
 .footer {
-  text-align: center;
-  padding: 32px 24px;
-  font-size: 12px;
-  color: var(--text-light);
-  border-top: 1px solid var(--border);
-  max-width: 900px;
-  margin: 0 auto;
+  text-align: center; padding: 32px 24px; font-size: 12px;
+  color: var(--text-light); border-top: 1px solid var(--border);
+  max-width: 900px; margin: 0 auto;
 }
 
 @media (max-width: 640px) {
-  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .metrics { grid-template-columns: repeat(2,1fr); }
+  .analysis-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -362,14 +260,16 @@ body {
   <div class="header-inner">
     <div class="header-badge">リベ大デンタルクリニック</div>
     <h1>武蔵小杉院 経営レポート</h1>
-    <p>日々の診療実績・スタッフ状況を確認できます。データはスプレッドシートから自動取得しています。</p>
-    <div class="header-date" id="headerDate">データ取得中...</div>
+    <p>Chatworkログを自動解析し、毎朝7時に最新状況を更新します。</p>
+    <div class="header-date" id="headerDate">読み込み中...</div>
   </div>
 </div>
 
 <div class="nav">
   <div class="nav-inner">
     <a href="#performance">診療実績</a>
+    <a href="#analysis">経営分析</a>
+    <a href="#action">課題・アクション</a>
     <a href="#chatwork">チャット</a>
     <a href="#improvement">取り組み</a>
     <a href="#oneon1">1on1面談</a>
@@ -382,11 +282,27 @@ body {
   <section id="performance" class="section">
     <div class="section-header">
       <div class="section-icon">📊</div>
-      <h2 class="section-title">診療実績</h2>
+      <h2 class="section-title">診療数値実績</h2>
     </div>
-    <div id="perfContent">
-      <div class="loading">スプレッドシートからデータを取得中...</div>
+    <div id="perfContent"><div class="loading">データを読み込み中...</div></div>
+  </section>
+
+  <!-- 経営分析 -->
+  <section id="analysis" class="section">
+    <div class="section-header">
+      <div class="section-icon">🧠</div>
+      <h2 class="section-title">経営分析</h2>
     </div>
+    <div id="analysisSummary"><div class="loading">分析データを読み込み中...</div></div>
+  </section>
+
+  <!-- 課題・アクション -->
+  <section id="action" class="section">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <h2 class="section-title">課題とアクションプラン</h2>
+    </div>
+    <div id="actionContent"><div class="loading">読み込み中...</div></div>
   </section>
 
   <!-- Chatwork -->
@@ -402,12 +318,16 @@ body {
           <th>用途</th>
         </tr>
         <tr>
-          <td>
-            <a href="https://www.chatwork.com/#!rid410972239" target="_blank" rel="noopener">
-              【リベクリ】歯科武蔵小杉院｜日報・業務連絡チャット
-            </a>
-          </td>
-          <td>日報の投稿・スタッフ間の業務連絡用チャット</td>
+          <td><a href="https://www.chatwork.com/#!rid410972239" target="_blank" rel="noopener">【リベクリ】歯科武蔵小杉院｜日報・業務連絡チャット</a></td>
+          <td>日報の投稿・スタッフ間の業務連絡（監視対象）</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.chatwork.com/#!rid422210775" target="_blank" rel="noopener">【リベクリ】武蔵小杉院Dr_すり合わせチャット</a></td>
+          <td>医師間のすり合わせ・方針共有（監視対象）</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.chatwork.com/#!rid421087514" target="_blank" rel="noopener">【リベクリ｜武蔵小杉院】医療事務 大塚さんとやり取りするチャット</a></td>
+          <td>医療事務との連絡・調整（監視対象）</td>
         </tr>
       </table>
     </div>
@@ -420,10 +340,9 @@ body {
       <h2 class="section-title">取り組み内容</h2>
     </div>
     <!--
-      【更新方法】
-      下の DATA.improveItems の done を true/false で切り替えてください。
+      【更新方法】DATA.improveItems の done を true/false で切り替え
       done: true  → チェックマーク（完了）
-      done: false → 空チェック（進行中）
+      done: false → 進行中
     -->
     <ul class="improve-list" id="improveList"></ul>
   </section>
@@ -435,11 +354,8 @@ body {
       <h2 class="section-title">1on1面談状況</h2>
     </div>
     <!--
-      【毎月の更新方法】
-      DATA.oneon1 の status と date を書き換えてください。
-        status: "done"      → 完了（緑）
-        status: "scheduled" → 予定あり（オレンジ）
-        status: "pending"   → 未定（グレー）
+      【毎月の更新方法】DATA.oneon1 の status と date を書き換え
+      status: "done" / "scheduled" / "pending"
     -->
     <div class="oneon1-summary" id="oneon1Summary"></div>
     <div id="oneon1Grid"></div>
@@ -449,185 +365,107 @@ body {
 
 <div class="footer">
   <p>リベ大デンタルクリニック武蔵小杉院 | 経営レポート</p>
-  <p style="margin-top:6px;"><span id="footerDate"></span></p>
+  <p style="margin-top:6px;" id="footerDate"></p>
 </div>
 
 <script>
 // ================================================================
-// ★ 手動更新が必要なデータはここを編集してください ★
+// ★ 手動更新が必要なデータ（取り組み・1on1）
 // ================================================================
 var DATA = {
-
-  // 対象月（表示用ラベル）
-  targetMonth: '2026年3月',
-
-  // ----------------------------------------------------------------
-  // 取り組み内容
-  //   done: true  → 完了
-  //   done: false → 進行中
-  //   date        → 完了日・備考（省略可）
-  // ----------------------------------------------------------------
   improveItems: [
     { text: '売上集計', done: false, date: '' },
     { text: '売上向上に向けたアクションプラン', done: false, date: '' },
     { text: 'タスクToDoリスト', done: false, date: '' }
   ],
-
-  // ----------------------------------------------------------------
-  // 1on1面談状況（毎月更新）
-  //   status: "done" / "scheduled" / "pending"
-  //   date  : 実施日 or 予定日（例: "3/15"）
-  // ----------------------------------------------------------------
   oneon1: [
-    // 院長・常勤歯科医師
-    { name: '松永先生',  role: '院長',         status: 'done', date: '3月完了' },
-    { name: '戸森先生',  role: '常勤歯科医師', status: 'done', date: '3月完了' },
-    { name: '瀧村先生',  role: '常勤歯科医師', status: 'done', date: '3月完了' },
-    // 非常勤歯科医師
-    { name: 'Mut先生',   role: '非常勤歯科医師', status: 'done', date: '3月完了' },
-    { name: 'わき先生',  role: '非常勤歯科医師', status: 'done', date: '3月完了' },
-    { name: '後藤先生',  role: '非常勤歯科医師', status: 'done', date: '3月完了' },
-    { name: '友成先生',  role: '非常勤歯科医師', status: 'done', date: '3月完了' },
-    // 矯正歯科医師
-    { name: 'けんぱ先生', role: '矯正歯科医師', status: 'done', date: '3月完了' },
-    { name: 'mai先生',   role: '矯正歯科医師', status: 'done', date: '3月完了' },
-    // 歯科衛生士
-    { name: 'ゆたさん',   role: '歯科衛生士', status: 'done', date: '3月完了' },
-    { name: 'ゆうりさん', role: '歯科衛生士', status: 'done', date: '3月完了' },
-    { name: 'あゆみさん', role: '歯科衛生士', status: 'done', date: '3月完了' },
-    { name: 'ひなこさん', role: '歯科衛生士', status: 'done', date: '3月完了' },
-    { name: 'めりさん',   role: '歯科衛生士', status: 'done', date: '3月完了' },
-    // 歯科助手
-    { name: 'さっちゃさん', role: '歯科助手', status: 'done', date: '3月完了' },
-    { name: 'みちこさん',   role: '歯科助手', status: 'done', date: '3月完了' },
-    { name: 'ちゃみさん',   role: '歯科助手', status: 'done', date: '3月完了' },
-    { name: 'まりこさん',   role: '歯科助手', status: 'done', date: '3月完了' },
-    { name: 'にきさん',     role: '歯科助手', status: 'done', date: '3月完了' },
-    { name: 'かおるさん',   role: '歯科助手', status: 'done', date: '3月完了' },
-    // 受付
-    { name: 'ましろさん', role: '受付', status: 'done', date: '3月完了' }
+    { name: '松永先生',   role: '院長',           status: 'done', date: '3月完了' },
+    { name: '戸森先生',   role: '常勤歯科医師',   status: 'done', date: '3月完了' },
+    { name: '瀧村先生',   role: '常勤歯科医師',   status: 'done', date: '3月完了' },
+    { name: 'Mut先生',    role: '非常勤歯科医師', status: 'done', date: '3月完了' },
+    { name: 'わき先生',   role: '非常勤歯科医師', status: 'done', date: '3月完了' },
+    { name: '後藤先生',   role: '非常勤歯科医師', status: 'done', date: '3月完了' },
+    { name: '友成先生',   role: '非常勤歯科医師', status: 'done', date: '3月完了' },
+    { name: 'けんぱ先生', role: '矯正歯科医師',   status: 'done', date: '3月完了' },
+    { name: 'mai先生',    role: '矯正歯科医師',   status: 'done', date: '3月完了' },
+    { name: 'ゆたさん',   role: '歯科衛生士',     status: 'done', date: '3月完了' },
+    { name: 'ゆうりさん', role: '歯科衛生士',     status: 'done', date: '3月完了' },
+    { name: 'あゆみさん', role: '歯科衛生士',     status: 'done', date: '3月完了' },
+    { name: 'ひなこさん', role: '歯科衛生士',     status: 'done', date: '3月完了' },
+    { name: 'めりさん',   role: '歯科衛生士',     status: 'done', date: '3月完了' },
+    { name: 'さっちゃさん', role: '歯科助手',     status: 'done', date: '3月完了' },
+    { name: 'みちこさん', role: '歯科助手',       status: 'done', date: '3月完了' },
+    { name: 'ちゃみさん', role: '歯科助手',       status: 'done', date: '3月完了' },
+    { name: 'まりこさん', role: '歯科助手',       status: 'done', date: '3月完了' },
+    { name: 'にきさん',   role: '歯科助手',       status: 'done', date: '3月完了' },
+    { name: 'かおるさん', role: '歯科助手',       status: 'done', date: '3月完了' },
+    { name: 'ましろさん', role: '受付',           status: 'done', date: '3月完了' }
   ]
 };
 
 // ================================================================
-// スプレッドシートID（シートが変わっても変更不要）
+// data.json の読み込みと描画
 // ================================================================
-var SHEET_ID = '1c3yPZdER5i4e0syuGkyFabF3cuG7VF_kVZBQ_rNGVL4';
+fetch('./data.json?t=' + Date.now())
+  .then(function(r){ return r.json(); })
+  .then(function(d){ renderAll(d); })
+  .catch(function(){ renderFallback(); });
 
-// ================================================================
-// Google Sheets → JSONP で取得
-// ================================================================
-function loadSheetData() {
-  var cbName = 'sheetCb_' + Date.now();
-  var script = document.createElement('script');
+function renderAll(d) {
+  var label = d.updatedAtLabel || '未更新';
+  document.getElementById('headerDate').textContent = '最終更新: ' + label;
+  document.getElementById('footerDate').textContent = '毎朝7時自動更新 | 最終: ' + label;
 
-  window[cbName] = function(res) {
-    try { parseAndRender(res); }
-    catch(e) { renderError('データ解析エラー: ' + e.message); }
-    delete window[cbName];
-    if (script.parentNode) script.parentNode.removeChild(script);
-  };
-
-  script.onerror = function() {
-    renderError('スプレッドシートへの接続に失敗しました。インターネット接続を確認してください。');
-    delete window[cbName];
-  };
-
-  script.src = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID
-             + '/gviz/tq?tqx=out:json&callback=' + cbName;
-  document.head.appendChild(script);
+  renderPerf(d);
+  renderAnalysis(d);
+  renderAction(d);
 }
 
-function getNum(row, idx) {
-  if (!row.c || !row.c[idx] || row.c[idx].v === null || row.c[idx].v === undefined) return 0;
-  var v = row.c[idx].v;
-  if (typeof v === 'number') return v;
-  return parseFloat(String(v).replace(/,/g, '')) || 0;
-}
-
-function parseAndRender(response) {
-  var rows = (response.table && response.table.rows) ? response.table.rows : [];
-  var daily = [];
-  var totalAmount = 0, totalPatients = 0;
-  var totalInsurance = 0, totalJihi = 0, totalKyosei = 0, totalHanpan = 0;
-  var maxDate = '';
-
-  rows.forEach(function(row) {
-    if (!row.c || !row.c[0]) return;
-    // gvizはDate型を "Date(yyyy,m,d)" で返すため、表示用の f フィールドを使う
-    var dateCell = row.c[0];
-    var dateVal = dateCell.f ? String(dateCell.f) : (dateCell.v ? String(dateCell.v) : '');
-
-    // MM/DD 形式のみ処理（ヘッダー行・集計行はスキップ）
-    if (!/^\d{2}\/\d{2}$/.test(dateVal)) return;
-
-    var patients  = getNum(row, 2);
-    var total     = getNum(row, 12);
-    if (patients === 0 && total === 0) return; // 休診日スキップ
-
-    var insurance = getNum(row, 5);
-    var jihi      = getNum(row, 7);
-    var kyosei    = getNum(row, 9);
-    var hanpan    = getNum(row, 11);
-
-    daily.push({ date: dateVal, patients: patients, total: total,
-                 insurance: insurance, jihi: jihi, kyosei: kyosei, hanpan: hanpan });
-    totalAmount    += total;
-    totalPatients  += patients;
-    totalInsurance += insurance;
-    totalJihi      += jihi;
-    totalKyosei    += kyosei;
-    totalHanpan    += hanpan;
-    maxDate = dateVal;
+function renderFallback() {
+  document.getElementById('headerDate').textContent = 'データ読み込みエラー';
+  ['perfContent','analysisSummary','actionContent'].forEach(function(id){
+    document.getElementById(id).innerHTML =
+      '<div class="error-msg">⚠️ data.json の読み込みに失敗しました。GitHub Actionsが正常に動作しているか確認してください。</div>';
   });
-
-  renderPerf(daily, totalAmount, totalPatients, totalInsurance, totalJihi, totalKyosei, totalHanpan, maxDate);
 }
 
-// ================================================================
-// 診療実績レンダリング
-// ================================================================
-function renderPerf(daily, totalAmount, totalPatients, totalInsurance, totalJihi, totalKyosei, totalHanpan, maxDate) {
-  var workDays    = daily.length;
-  var avgPatients = workDays > 0 ? Math.round(totalPatients / workDays) : 0;
-  var jihiRate    = totalAmount > 0 ? Math.round(totalJihi / totalAmount * 100) : 0;
+// ---- 診療実績 ----
+function renderPerf(d) {
+  var m = d.monthly || {};
+  var reports = d.dailyReports || [];
 
-  var dateLabel = maxDate
-    ? DATA.targetMonth + '（' + maxDate + ' 時点）'
-    : DATA.targetMonth;
-  document.getElementById('headerDate').textContent = '最終データ: ' + dateLabel;
-  document.getElementById('footerDate').textContent = 'データ: ' + dateLabel + ' ・スプレッドシートから自動取得';
+  if (!reports.length) {
+    document.getElementById('perfContent').innerHTML =
+      '<div class="no-data">📋 データがありません。毎朝7時に自動取得されます。<br>手動で今すぐ更新する場合は GitHub Actions の「Run workflow」を使用してください。</div>';
+    return;
+  }
 
-  // 内訳バー
-  var pIns  = totalAmount > 0 ? (totalInsurance / totalAmount * 100).toFixed(1) : 0;
-  var pJihi = totalAmount > 0 ? (totalJihi      / totalAmount * 100).toFixed(1) : 0;
-  var pKyo  = totalAmount > 0 ? (totalKyosei    / totalAmount * 100).toFixed(1) : 0;
-  var pHan  = totalAmount > 0 ? (totalHanpan    / totalAmount * 100).toFixed(1) : 0;
+  var pIns  = m.total > 0 ? (m.insurance / m.total * 100).toFixed(1) : 0;
+  var pJihi = m.total > 0 ? (m.jihi      / m.total * 100).toFixed(1) : 0;
+  var pKyo  = m.total > 0 ? (m.kyosei    / m.total * 100).toFixed(1) : 0;
+  var pHan  = m.total > 0 ? (m.hanpan    / m.total * 100).toFixed(1) : 0;
 
-  // 日別チャート
-  var maxVal = daily.length > 0 ? Math.max.apply(null, daily.map(function(d){ return d.total; })) : 1;
-  var bars = daily.map(function(d) {
-    var h = Math.max(6, d.total / maxVal * 120);
+  var maxVal = Math.max.apply(null, reports.map(function(r){ return r.total; })) || 1;
+  var bars = reports.map(function(r){
+    var h = Math.max(6, r.total / maxVal * 120);
     return '<div class="bar-item">'
-      + '<div class="bar-value">' + (d.total/10000).toFixed(0) + '万</div>'
+      + '<div class="bar-value">' + (r.total/10000).toFixed(0) + '万</div>'
       + '<div class="bar" style="height:' + h + 'px"></div>'
-      + '<div class="bar-label">' + d.date + '</div>'
+      + '<div class="bar-label">' + r.date + '</div>'
       + '</div>';
   }).join('');
 
-  var html = ''
+  document.getElementById('perfContent').innerHTML = ''
 
-    // --- メトリクス ---
     + '<div class="metrics">'
-    + mkMetric('月次売上（累計）', fmtYen(totalAmount), workDays + '診療日分')
-    + mkMetric('平均患者数/日',   avgPatients + '人',  workDays + '日の平均')
-    + mkMetric('自費率',          jihiRate + '%',      '自費 ' + fmtYenS(totalJihi))
-    + mkMetric('矯正売上',        fmtYenS(totalKyosei), '矯正累計')
+    + mkMetric('月次売上（累計）', fmtY(m.total),        m.workDays + '診療日分')
+    + mkMetric('平均患者数/日',   m.avgPatients + '人',  m.workDays + '日の平均')
+    + mkMetric('自費率',          m.jihiRate + '%',      '自費 ' + fmtYS(m.jihi))
+    + mkMetric('矯正売上',        fmtYS(m.kyosei),       '矯正累計')
     + '</div>'
 
-    // --- 内訳バー ---
     + '<div class="breakdown">'
-    + '<h5>売上内訳（保険 / 自費 / 矯正 / 物販）</h5>'
+    + '<h5>売上内訳</h5>'
     + '<div class="breakdown-bar">'
     + '<span class="seg-insurance" style="width:' + pIns  + '%"></span>'
     + '<span class="seg-jihi"      style="width:' + pJihi + '%"></span>'
@@ -635,152 +473,138 @@ function renderPerf(daily, totalAmount, totalPatients, totalInsurance, totalJihi
     + '<span class="seg-hanpan"    style="width:' + pHan  + '%"></span>'
     + '</div>'
     + '<div class="breakdown-legend">'
-    + mkLegend('#0d6e6e', '保険', totalInsurance, pIns)
-    + mkLegend('#f0a050', '自費', totalJihi,      pJihi)
-    + mkLegend('#a855f7', '矯正', totalKyosei,    pKyo)
-    + mkLegend('#22c55e', '物販', totalHanpan,    pHan)
-    + '</div>'
-    + '</div>'
+    + mkLeg('#0d6e6e','保険', m.insurance, pIns)
+    + mkLeg('#f0a050','自費', m.jihi,      pJihi)
+    + mkLeg('#a855f7','矯正', m.kyosei,    pKyo)
+    + mkLeg('#22c55e','物販', m.hanpan,    pHan)
+    + '</div></div>'
 
-    // --- 日別チャート ---
     + '<div class="chart-wrap">'
-    + '<div class="chart-title">日別売上推移（' + DATA.targetMonth + '）</div>'
-    + '<div class="chart-note">※ 保険＋自費＋矯正＋物販の合計　　患者0人の日（休診）は除外</div>'
-    + '<div class="chart-bar">'
-    + (bars || '<div style="padding:24px;color:var(--text-light);font-size:13px;">データがありません</div>')
+    + '<div class="chart-title">日別売上推移（' + (d.targetMonth||'今月') + '）</div>'
+    + '<div class="chart-note">※ 保険＋自費＋矯正＋物販の合計</div>'
+    + '<div class="chart-bar">' + bars + '</div>'
+    + '</div>';
+}
+
+// ---- 経営分析 ----
+function renderAnalysis(d) {
+  var a = d.analysis || {};
+  var summary = a.summary || '分析データがありません。';
+  document.getElementById('analysisSummary').innerHTML =
+    '<div class="analysis-summary">'
+    + '<div class="label">📝 経営状況サマリー（' + (d.updatedAtLabel || '') + '）</div>'
+    + summary
     + '</div>'
+    + (a.risks && a.risks.length ? mkAnalysisCard('card-risk', '⚠️ リスク・要注意事項', a.risks) : '');
+}
+
+// ---- 課題・アクションプラン ----
+function renderAction(d) {
+  var a = d.analysis || {};
+  var html = '';
+
+  html += '<div class="analysis-grid">';
+  if (a.goodPoints && a.goodPoints.length)
+    html += mkAnalysisCard('card-good', '✅ 良い点', a.goodPoints);
+  if (a.improvements && a.improvements.length)
+    html += mkAnalysisCard('card-improve', '⚡ 改善が必要な点', a.improvements);
+  html += '</div>';
+
+  if (a.actionPlans && a.actionPlans.length)
+    html += mkAnalysisCard('card-action', '🚀 アクションプラン', a.actionPlans);
+
+  if (!html.trim() || html === '<div class="analysis-grid"></div>') {
+    html = '<div class="no-data">データがありません。毎朝7時に自動更新されます。</div>';
+  }
+
+  document.getElementById('actionContent').innerHTML = html;
+}
+
+function mkAnalysisCard(cls, title, items) {
+  var lis = items.map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('');
+  return '<div class="analysis-card ' + cls + '">'
+    + '<div class="card-title">' + title + '</div>'
+    + '<ul>' + lis + '</ul>'
     + '</div>';
-
-  document.getElementById('perfContent').innerHTML = html;
 }
 
-function mkMetric(label, value, sub) {
-  return '<div class="metric">'
-    + '<div class="label">' + label + '</div>'
-    + '<div class="value">' + value + '</div>'
-    + '<div class="sub">'   + sub   + '</div>'
-    + '</div>';
-}
-
-function mkLegend(color, label, amount, pct) {
-  return '<div class="legend-item">'
-    + '<div class="legend-dot" style="background:' + color + '"></div>'
-    + '<span class="legend-label">' + label + '</span>'
-    + '<span class="legend-amount">' + fmtYenS(amount) + '</span>'
-    + '<span class="legend-label">(' + pct + '%)</span>'
-    + '</div>';
-}
-
-function fmtYen(n) {
-  if (n >= 1000000) return (n / 10000).toFixed(0) + '万円';
-  if (n >= 10000)   return (n / 10000).toFixed(1) + '万円';
-  return n.toLocaleString() + '円';
-}
-
-function fmtYenS(n) {
-  if (n >= 10000) return (n / 10000).toFixed(1) + '万円';
-  return n.toLocaleString() + '円';
-}
-
-function renderError(msg) {
-  document.getElementById('perfContent').innerHTML =
-    '<div class="error-msg">⚠️ ' + msg + '</div>';
-  document.getElementById('headerDate').textContent = DATA.targetMonth;
-  document.getElementById('footerDate').textContent = DATA.targetMonth;
-}
-
-// ================================================================
-// 取り組み内容レンダリング
-// ================================================================
+// ---- 取り組み ----
 function renderImprove() {
-  var el = document.getElementById('improveList');
-  el.innerHTML = DATA.improveItems.map(function(item) {
-    return '<li class="' + (item.done ? 'done' : '') + '">'
-      + item.text
-      + (item.date ? '<span class="date">' + item.date + '</span>' : '')
+  document.getElementById('improveList').innerHTML = DATA.improveItems.map(function(i){
+    return '<li class="' + (i.done?'done':'') + '">'
+      + esc(i.text)
+      + (i.date ? '<span class="date">' + esc(i.date) + '</span>' : '')
       + '</li>';
   }).join('');
 }
 
-// ================================================================
-// 1on1レンダリング
-// ================================================================
+// ---- 1on1 ----
 function renderOneon1() {
-  var doneCount = DATA.oneon1.filter(function(s){ return s.status === 'done'; }).length;
+  var done = DATA.oneon1.filter(function(s){ return s.status==='done'; }).length;
   document.getElementById('oneon1Summary').textContent =
-    DATA.targetMonth + ' — ' + doneCount + ' / ' + DATA.oneon1.length + '名 完了';
+    '今月 — ' + done + ' / ' + DATA.oneon1.length + '名 完了';
 
   var groups = [
-    { label: '歯科医師（院長・常勤・非常勤・矯正）',
-      roles: ['院長', '常勤歯科医師', '非常勤歯科医師', '矯正歯科医師'] },
-    { label: '歯科衛生士',
-      roles: ['歯科衛生士'] },
-    { label: '歯科助手・受付',
-      roles: ['歯科助手', '受付'] }
+    { label: '歯科医師（院長・常勤・非常勤・矯正）', roles: ['院長','常勤歯科医師','非常勤歯科医師','矯正歯科医師'] },
+    { label: '歯科衛生士', roles: ['歯科衛生士'] },
+    { label: '歯科助手・受付', roles: ['歯科助手','受付'] }
   ];
 
   var html = '';
-  groups.forEach(function(group) {
-    var members = DATA.oneon1.filter(function(s){
-      return group.roles.indexOf(s.role) !== -1;
-    });
+  groups.forEach(function(g){
+    var members = DATA.oneon1.filter(function(s){ return g.roles.indexOf(s.role) !== -1; });
     if (!members.length) return;
-
-    html += '<div class="oneon1-group">'
-          + '<div class="oneon1-group-title">' + group.label + '</div>'
-          + '<div class="oneon1-grid">';
-
-    members.forEach(function(m) {
-      var statusText = m.status === 'done'      ? '✓ ' + (m.date || '完了')
-                     : m.status === 'scheduled' ? '📅 ' + (m.date || '予定あり')
-                     : '未実施';
-      html += '<div class="oneon1-card ' + m.status + '">'
-            + '<div class="oneon1-name">' + m.name + '</div>'
-            + '<div class="oneon1-status">' + statusText + '</div>'
-            + '</div>';
+    html += '<div class="oneon1-group"><div class="oneon1-group-title">' + g.label + '</div><div class="oneon1-grid">';
+    members.forEach(function(m){
+      var st = m.status==='done' ? '✓ '+(m.date||'完了')
+             : m.status==='scheduled' ? '📅 '+(m.date||'予定あり') : '未実施';
+      html += '<div class="oneon1-card ' + m.status + '"><div class="oneon1-name">' + esc(m.name) + '</div>'
+            + '<div class="oneon1-status">' + st + '</div></div>';
     });
-
     html += '</div></div>';
   });
-
   document.getElementById('oneon1Grid').innerHTML = html;
 }
 
-// ================================================================
-// ナビゲーション
-// ================================================================
+// ---- Nav ----
 function initNav() {
   var secs  = document.querySelectorAll('.section[id]');
   var links = document.querySelectorAll('.nav a');
-
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function(){
     var cur = '';
-    secs.forEach(function(s) {
-      if (window.scrollY >= s.offsetTop - 80) cur = s.id;
-    });
-    links.forEach(function(a) {
-      var active = a.getAttribute('href') === '#' + cur;
-      a.style.background = active ? 'var(--primary-light)' : '';
-      a.style.color      = active ? 'var(--primary)' : '';
+    secs.forEach(function(s){ if (window.scrollY >= s.offsetTop-80) cur = s.id; });
+    links.forEach(function(a){
+      var on = a.getAttribute('href') === '#'+cur;
+      a.style.background = on ? 'var(--primary-light)' : '';
+      a.style.color      = on ? 'var(--primary)' : '';
     });
   });
-
-  links.forEach(function(a) {
-    a.addEventListener('click', function(e) {
+  links.forEach(function(a){
+    a.addEventListener('click', function(e){
       e.preventDefault();
-      var target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      var t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({behavior:'smooth'});
     });
   });
 }
 
-// ================================================================
-// 初期化
-// ================================================================
+// ---- Helpers ----
+function mkMetric(label, val, sub) {
+  return '<div class="metric"><div class="label">'+label+'</div><div class="value">'+val+'</div><div class="sub">'+sub+'</div></div>';
+}
+function mkLeg(color, label, amt, pct) {
+  return '<div class="legend-item"><div class="legend-dot" style="background:'+color+'"></div>'
+    + '<span class="legend-label">'+label+'</span><span class="legend-amount">'+fmtYS(amt)+'</span>'
+    + '<span class="legend-label">('+pct+'%)</span></div>';
+}
+function fmtY(n)  { if(n>=1000000) return (n/10000).toFixed(0)+'万円'; if(n>=10000) return (n/10000).toFixed(1)+'万円'; return (n||0).toLocaleString()+'円'; }
+function fmtYS(n) { if(n>=10000) return (n/10000).toFixed(1)+'万円'; return (n||0).toLocaleString()+'円'; }
+function esc(s)   { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// ---- 初期化 ----
 renderImprove();
 renderOneon1();
 initNav();
-loadSheetData();
 </script>
 
 </body>

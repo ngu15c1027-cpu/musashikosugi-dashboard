@@ -1,0 +1,25 @@
+{
+  "updatedAt": null,
+  "updatedAtLabel": "初期データ（まだ自動更新されていません）",
+  "targetMonth": "2026年3月",
+  "dailyReports": [],
+  "monthly": {
+    "total": 0,
+    "patients": 0,
+    "insurance": 0,
+    "jihi": 0,
+    "kyosei": 0,
+    "hanpan": 0,
+    "jihiRate": 0,
+    "workDays": 0,
+    "avgPatients": 0
+  },
+  "latest": null,
+  "analysis": {
+    "summary": "毎朝7時に自動更新されます。初回更新をお待ちください。",
+    "goodPoints": [],
+    "improvements": [],
+    "actionPlans": [],
+    "risks": []
+  }
+}
