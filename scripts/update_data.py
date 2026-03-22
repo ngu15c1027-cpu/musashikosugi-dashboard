@@ -198,15 +198,28 @@ JSONのみを返してください。"""
                 messages=[{'role': 'user', 'content': prompt}]
             )
             text = message.content[0].text.strip()
+            print(f'  Claude応答（先頭200文字）: {text[:200]}')
+            # ```json ... ``` ブロックにも対応
+            code_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
+            if code_match:
+                text = code_match.group(1)
             m = re.search(r'\{.*\}', text, re.DOTALL)
             if m:
-                return json.loads(m.group())
+                try:
+                    result = json.loads(m.group())
+                    print('  JSON解析: 成功')
+                    return result
+                except json.JSONDecodeError as je:
+                    print(f'  JSON解析エラー: {je}')
+            else:
+                print('  JSONが見つかりませんでした')
         except Exception as e:
             print(f'Error:  Claude API: {e}')
             if attempt < 2:
                 print(f'  60秒後にリトライ ({attempt+1}/3)...')
                 time.sleep(60)
             continue
+        break
 
     return {
         'summary': '分析データを取得できませんでした。次回の実行をお待ちください。',
