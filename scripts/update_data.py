@@ -194,19 +194,17 @@ JSONのみを返してください。"""
         try:
             message = client.messages.create(
                 model='claude-sonnet-4-6',
-                max_tokens=1500,
+                max_tokens=3000,
                 messages=[{'role': 'user', 'content': prompt}]
             )
             text = message.content[0].text.strip()
-            print(f'  Claude応答（先頭200文字）: {text[:200]}')
-            # ```json ... ``` ブロックにも対応
-            code_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
-            if code_match:
-                text = code_match.group(1)
-            m = re.search(r'\{.*\}', text, re.DOTALL)
-            if m:
+            # { から最後の } までを抽出してパース
+            start = text.find('{')
+            end   = text.rfind('}')
+            if start != -1 and end != -1 and end > start:
+                json_str = text[start:end+1]
                 try:
-                    result = json.loads(m.group())
+                    result = json.loads(json_str)
                     print('  JSON解析: 成功')
                     return result
                 except json.JSONDecodeError as je:
