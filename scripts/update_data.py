@@ -145,11 +145,14 @@ def format_context(all_messages, daily_reports):
     for room_id, msgs in all_messages.items():
         name = ROOM_NAMES.get(room_id, room_id)
         lines.append(f'\n=== {name} ===')
-        recent = msgs[-50:] if len(msgs) > 50 else msgs
+        # トークン削減のため最新20件に絞る
+        recent = msgs[-20:] if len(msgs) > 20 else msgs
         for msg in recent:
             dt = datetime.fromtimestamp(msg.get('send_time', 0), tz=JST)
             body = msg.get('body', '').strip()
+            # 長すぎるメッセージは先頭200文字に切り詰める
             if body:
+                body = body[:200] + ('...' if len(body) > 200 else '')
                 lines.append(f'[{dt.strftime("%m/%d %H:%M")}] {body}')
 
     if daily_reports:
@@ -186,18 +189,24 @@ def analyze_with_claude(all_messages, daily_reports):
 
 JSONのみを返してください。"""
 
-    try:
-        message = client.messages.create(
-            model='claude-sonnet-4-6',
-            max_tokens=2000,
-            messages=[{'role': 'user', 'content': prompt}]
-        )
-        text = message.content[0].text.strip()
-        m = re.search(r'\{.*\}', text, re.DOTALL)
-        if m:
-            return json.loads(m.group())
-    except Exception as e:
-        print(f'[ERROR] Claude API: {e}')
+    import time
+    for attempt in range(3):  # 最大3回リトライ
+        try:
+            message = client.messages.create(
+                model='claude-sonnet-4-6',
+                max_tokens=1500,
+                messages=[{'role': 'user', 'content': prompt}]
+            )
+            text = message.content[0].text.strip()
+            m = re.search(r'\{.*\}', text, re.DOTALL)
+            if m:
+                return json.loads(m.group())
+        except Exception as e:
+            print(f'Error:  Claude API: {e}')
+            if attempt < 2:
+                print(f'  60秒後にリトライ ({attempt+1}/3)...')
+                time.sleep(60)
+            continue
 
     return {
         'summary': '分析データを取得できませんでした。次回の実行をお待ちください。',
