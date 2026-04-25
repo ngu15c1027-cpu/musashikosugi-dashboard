@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-25T07:43:21.054275+09:00",
-  "updatedAtLabel": "2026年04月25日 07:43",
+  "updatedAt": "2026-04-26T07:41:54.618302+09:00",
+  "updatedAtLabel": "2026年04月26日 07:41",
   "targetMonth": "2026年04月",
   "dailyReports": [
     {
@@ -485,41 +485,64 @@
       "total": 535110,
       "jissitsu": 39,
       "jihiRate": 45
+    },
+    {
+      "date": "04/25",
+      "timestamp": 1777086000,
+      "insurance": {
+        "count": 63,
+        "amount": 588460
+      },
+      "jihi": {
+        "count": 6,
+        "amount": 39600
+      },
+      "kyosei": {
+        "count": 0,
+        "amount": 0
+      },
+      "hanpan": {
+        "count": 14,
+        "amount": 37910
+      },
+      "total": 665970,
+      "jissitsu": 69,
+      "jihiRate": 6
     }
   ],
   "monthly": {
-    "total": 16722670,
-    "patients": 870,
-    "insurance": 6857940,
-    "jihi": 4927000,
+    "total": 17388640,
+    "patients": 939,
+    "insurance": 7446400,
+    "jihi": 4966600,
     "kyosei": 4576000,
-    "hanpan": 361730,
+    "hanpan": 399640,
     "jihiRate": 29,
-    "workDays": 21,
-    "avgPatients": 41
+    "workDays": 22,
+    "avgPatients": 43
   },
   "latest": {
-    "date": "04/24",
-    "timestamp": 1776999600,
+    "date": "04/25",
+    "timestamp": 1777086000,
     "insurance": {
-      "count": 36,
-      "amount": 289360
+      "count": 63,
+      "amount": 588460
     },
     "jihi": {
-      "count": 3,
-      "amount": 234000
+      "count": 6,
+      "amount": 39600
     },
     "kyosei": {
       "count": 0,
       "amount": 0
     },
     "hanpan": {
-      "count": 5,
-      "amount": 11750
+      "count": 14,
+      "amount": 37910
     },
-    "total": 535110,
-    "jissitsu": 39,
-    "jihiRate": 45
+    "total": 665970,
+    "jissitsu": 69,
+    "jihiRate": 6
   },
   "analysis": {
     "summary": "分析データを取得できませんでした。次回の実行をお待ちください。",
